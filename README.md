@@ -20,3 +20,41 @@ APIKEY(length?: number, ch?: string, div?: number, string?: string)
 RandomNum: (length?: number, string?: string)
 RandomNum: (length?: number, string?: string)
 ```
+
+# API 
+```js
+APIKEY(length,ch,div,string)
+`Returns a 16 character with numbers unique API KEY.
+you can change the length for the API and the chatacters that you want to use 
+
+for example :-
+APIKEY(8,'^',2,'abcd') // => ca^cd^cb^cb
+APIKEY(8,'^',3,'abcd') // => dca^adc
+APIKEY(9,'^',3,'abcd') // => aac^aab^cab
+
+```
+
+```js 
+RandomNum() 
+`Returns a 16  numbers unique numbers.
+you can change the length for the numbers and the numbers that you want to use 
+
+for example :-
+RandomNum(8)        // => 77619850
+RandomNum(9,"123") // => 231211123
+ 
+
+```
+  
+```js 
+RandomString() 
+`Returns a  16 chatacters unique string.
+you can change the length for the string and the chatacters that you want to use 
+
+for example :-
+RandomString(8)         // => EakAvoLE
+RandomString(9,"abc")  // => bacbabbcb
+RandomString(9,'aB@') // =>BBaB@aaaB
+
+```
+ 

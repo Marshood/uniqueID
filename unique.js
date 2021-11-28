@@ -1,6 +1,6 @@
 //123ad-asd12-16asd
 const APIKEY = (
-  length,
+  length=16,
   ch = "-",
   div = 4,
   string = "ABCDEFGlaHgIhJKLjMNwOPqQRsSTcUVWnXYZm012u34f56789"
@@ -33,6 +33,7 @@ const APIKEY = (
   let new_value = chuncks.join(ch); //returns 123-456-789
   return new_value;
 };
+//asd
 //466322145452
 const RandomNum = (length = 16, string = "0123456789") => {
   if (isNaN(length) || isNaN(string)) {
@@ -48,7 +49,7 @@ const RandomNum = (length = 16, string = "0123456789") => {
       .join("");
   }
   let str = "";
-
+  i=0;
   while (i < length) {
     str += string.charAt(Math.floor(Math.random() * string.length));
     i++;
@@ -70,7 +71,8 @@ const RandomString = (length = 16, string = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQr
         .join("");
     }
     let str = "";
-  
+    i=0;
+
     while (i < length) {
       str += string.charAt(Math.floor(Math.random() * string.length));
       i++;

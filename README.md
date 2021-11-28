@@ -3,11 +3,13 @@ A module that return unique random characters which could be all be string or nu
 
 
 # Installation 
- npm i uniqueapi_id
- npm i uniqueapi_id --save-dev
-
+```
+ $ npm i uniqueapi_id
+ $ npm i uniqueapi_id --save-dev
+```
 # Usage
 
+```js
 import {APIKEY,RandomNum,RandomString} from 'uniqueapi_id';
 
 APIKEY();        // =>  f4cR-7qfs-ssYJ-1hEL
@@ -17,3 +19,4 @@ RandomString() // => lBuEmxWZGZLYQXfJ
 APIKEY(length?: number, ch?: string, div?: number, string?: string) 
 RandomNum: (length?: number, string?: string)
 RandomNum: (length?: number, string?: string)
+```

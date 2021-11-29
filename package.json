@@ -1,6 +1,6 @@
 {
-  "name": "uniqueapi_id",
-  "version": "1.0.4",
+  "name": "uniqueid_api",
+  "version": "1.0.1",
   "description": "A module that returns random strings and API keys,Unique ID Generator",
   "main": "unique.js",
   "scripts": {

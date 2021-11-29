@@ -38,8 +38,7 @@ const APIKEY = (
     map.set(new_value, "APIKEY");
     return new_value;
   }
-  return 'Error -> try again '
-
+  return "Error -> try again ";
 };
 //466322145452
 const RandomNum = (length = 16, string = "0123456789") => {
@@ -61,14 +60,13 @@ const RandomNum = (length = 16, string = "0123456789") => {
     str += string.charAt(Math.floor(Math.random() * string.length));
     i++;
   }
-  if (map.has(new_value)) {
+  if (map.has(str)) {
     str = RandomNum(length, string);
   } else {
     map.set(str, "RandomNum");
     return str;
   }
-  return 'Error -> try again '
-
+  return "Error -> try again ";
 };
 //jshAdfAfaFm
 const RandomString = (
@@ -94,16 +92,32 @@ const RandomString = (
     str += string.charAt(Math.floor(Math.random() * string.length));
     i++;
   }
-   if (map.has(new_value)) {
-    str = RandomString(length,string);
+  if (map.has(str)) {
+    str = RandomString(length, string);
   } else {
     map.set(str, "RandomString");
     return str;
   }
-  return 'Error -> try again '
- };
+  return "Error -> try again ";
+};
 
- 
+const GetStoredKeys = (type) => {
+  if (type === "APIKEY") {
+    return [...map.entries()]
+      .filter(({ 1: v }) => v === "APIKEY")
+      .map(([k]) => k);
+  } else if (type === "RandomNum") {
+    return [...map.entries()]
+      .filter(({ 1: v }) => v === "RandomNum")
+      .map(([k]) => k);
+  } else if (type === "RandomString") {
+    return [...map.entries()]
+      .filter(({ 1: v }) => v === "RandomString")
+      .map(([k]) => k);
+  } else if (type === "All") {
+    return map.keys();
+  }
+};
 
 module.exports.APIKEY = APIKEY;
 module.exports.RandomString = RandomString;

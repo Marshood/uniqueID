@@ -13,15 +13,16 @@ And we make it unique using hashMap
 # Usage
 
 ```js
-import {APIKEY,RandomNum,RandomString} from 'uniqueapi_id';
+import {APIKEY,RandomNum,RandomString,GetStoredKeys} from 'uniqueapi_id';
 
 APIKEY();        // =>  f4cR-7qfs-ssYJ-1hEL
 RandomNum();     // => 7880153464456115
 RandomString(); // => lBuEmxWZGZLYQXfJ
-
+GetStoredKeys(type) // => return all the keys that created and stored
 APIKEY(length?: number, ch?: string, div?: number, string?: string)
 RandomNum: (length?: number, string?: string)
 RandomNum: (length?: number, string?: string)
+GetStoredKeys(type?: string)
 ```
 
 # API

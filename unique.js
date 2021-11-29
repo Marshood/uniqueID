@@ -122,3 +122,4 @@ const GetStoredKeys = (type) => {
 module.exports.APIKEY = APIKEY;
 module.exports.RandomString = RandomString;
 module.exports.RandomNum = RandomNum;
+module.exports.GetStoredKeys = GetStoredKeys;
